@@ -1,0 +1,20 @@
+spring:
+  master-datasource:
+    username: root
+    password: 123456;a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost/test_master
+    hikari:
+      pool-name: HikariCP
+      auto-commit: false
+  slave-datasource:
+    username: root
+    password: 123456;a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://localhost/test_slave
+    hikari:
+      pool-name: HikariCP
+      auto-commit: false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
